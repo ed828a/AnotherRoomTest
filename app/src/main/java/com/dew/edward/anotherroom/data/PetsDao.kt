@@ -15,15 +15,15 @@ interface PetsDao {
     fun getPetByName(name: String): Pet
 
     @Query("DELETE FROM pets WHERE name = :name")
-    fun deletePet(name: String): Boolean
+    fun deletePet(name: String)
 
     @Insert
-    fun insetPet(pet: Pet): Boolean
+    fun insetPet(pet: Pet)
 
     @Update
-    fun updatePet(pet: Pet) : Boolean
+    fun updatePet(pet: Pet)
 
-    @Delete
+    @Query("DELETE FROM pets")
     fun deleteAllPets()
 
 }
