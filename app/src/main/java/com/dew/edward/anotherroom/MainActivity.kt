@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         doAsync{
-//            petsDb = PetsDatabase.getPetsDb(applicationContext)!!
+            petsDb = PetsDatabase.getPetsDb(applicationContext)!!
             wordsDb = WordDatabase.getInstance(applicationContext)
         }
 

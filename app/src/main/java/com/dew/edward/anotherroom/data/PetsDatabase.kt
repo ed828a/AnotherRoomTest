@@ -10,8 +10,8 @@ import android.content.Context
  * Created by Edward on 5/26/2018.
  */
 
-@Database(entities = [(Pet::class)], version = 1)
-abstract class PetsDatabase(context: Context): RoomDatabase() {
+@Database(entities = [(Pet::class)], version = 1, exportSchema = false)
+abstract class PetsDatabase: RoomDatabase() {
 
      abstract fun mPetsDao(): PetsDao
 

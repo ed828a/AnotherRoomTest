@@ -1,10 +1,12 @@
 package com.dew.edward.anotherroom.data
 
+import android.arch.persistence.room.Database
 import android.arch.persistence.room.Room
 import android.arch.persistence.room.RoomDatabase
 import android.content.Context
 
-abstract class WordDatabase(context: Context): RoomDatabase() {
+@Database(entities = [Word::class], version = 1, exportSchema = false)
+abstract class WordDatabase: RoomDatabase() {
 
     abstract fun wordDao(): WordDao
 
