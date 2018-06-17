@@ -6,11 +6,13 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import com.dew.edward.anotherroom.data.PetsDatabase
+import com.dew.edward.anotherroom.data.WordDatabase
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.doAsync
 
 class MainActivity : AppCompatActivity() {
     lateinit var petsDb: PetsDatabase
+    lateinit var wordsDb: WordDatabase
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +25,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         doAsync{
-            petsDb = PetsDatabase.getPetsDb(applicationContext)!!
+//            petsDb = PetsDatabase.getPetsDb(applicationContext)!!
+            wordsDb = WordDatabase.getInstance(applicationContext)
         }
 
 
